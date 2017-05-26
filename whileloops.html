@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>While Loop</title>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-type" content="text/html" charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+<div id="messageBox"></div>
+
+<input id="myNumber" type="number">
+<br><br>
+
+<button id="guessNumber">Guess the number!</button>
+
+<script>
+	var numberGuessed;
+	var computerGuess;
+	var computerCorrect = false;
+	var numberoftries = 1;
+
+	document.getElementById('guesssNumber').onclick = function() {
+		computerGuess = (Math.random() * 10); 
+		computerGuess = Math.floor(computerGuess + 1);
+
+		numberGuessed = parseInt(document.getElementById('myNumber').value);
+
+		if (numberGuessed==computerGuess) {
+			alert("Yes, the computer guessed the number, which is " +numberGuessed);
+		}
+
+		else {
+			while (computerCorrect==false) {
+				computerGuess = (Math.random() * 10); 
+				computerGuess = Math.floor(computerGuess + 1);
+					alert("comp's new guess is " + computerGuess);
+				numberoftries++
+				if (numberGuessed==computerGuess) {
+					alert("The comp guessed, it took "+numberoftries+ "attempts");
+				}
+			}
+		}
+	}
+</script>
+
+
+
+</body>
+</html>

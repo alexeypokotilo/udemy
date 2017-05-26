@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Game</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		#square {
+			width: 200px;
+			height: 200px;
+			
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	Guess the color: 
+	<select id="mycolor">
+		<option value="1">Red</option>
+		<option value="2">Orange</option>
+		<option value="3">Yellow</option>
+	</select>
+	<br><br>
+	<button id="checkColor">Guess the color</button>
+	<br><br>
+	<div id="square"></div>
+
+	<script type="text/javascript">
+		var colorCheck = parseInt(document.getElementById("mycolor").value);
+
+		document.getElementById("checkColor").onclick = function() {
+
+		
+			colorCheck = parseInt(document.getElementById("mycolor").value)
+
+			var CorrectColor
+
+			var theColor = (Math.floor(Math.random() * 3) + 1);
+
+				if (theColor==1) {
+					CorrectColor = "Red";
+					document.getElementById("square").style.display = "block";
+					document.getElementById("square").style.background-color = "red";
+					if (theColor==colorCheck) {
+						alert("You Are Right, the color was "+CorrectColor);
+					}
+					else {
+						alert("Sorry, the correct color was "+CorrectColor);
+					}
+				}
+				
+
+				else if (theColor==2) {
+					CorrectColor == "Orange";
+					document.getElementById("square").style.display = "block";
+					document.getElementById("square").style.background-color = "orange";
+					if (theColor==colorCheck) {
+						alert("You Are Right, the color was "+CorrectColor);
+					}
+					else {
+						alert("Sorry, the correct color was "+CorrectColor);
+					}
+				}
+
+				else (theColor==3) {
+					CorrectColor == "Yellow";
+					document.getElementById("square").style.display = "block";
+					document.getElementById("square").style.background-color = "yellow"; 
+					if (theColor==colorCheck) {
+						alert("You Are Right, the color was "+CorrectColor);
+					}
+					else {
+						alert("Sorry, the correct color was "+CorrectColor);
+					}
+				}
+		
+		}
+
+
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="content-type" content="text/html">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JS</title>
+</head>
+
+<body>
+
+<div id="messageBox">This is the message box</div>
+
+<input id="inputBox" type="text" value="10"> + <input id="inputBox2" type="text" value="10"> 
+<button id="buttonClick">сalculate</button>
+
+
+<script type="text/javascript">
+	var inputBoxVariable = parseInt(document.getElementById("inputBox").value);
+	var inputBoxVariable2 = parseInt(document.getElementById("inputBox2").value);
+
+	document.getElementById("buttonClick").onclick = function() {
+		inputBoxVariable = parseInt(document.getElementById("inputBox").value);
+		inputBoxVariable2 = parseInt(document.getElementById("inputBox2").value);
+
+		finalSum = inputBoxVariable + inputBoxVariable2
+
+		document.getElementById("messageBox").innerHTML = finalSum;
+
+	}
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Interval</title>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-type" content="text/html" charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<div id="showTimer">
+	
+</div>
+<div id="stopTimer">let's fix this bug by setting it better bug fixed</div>
+<br><br>
+
+<button onclick="stopTimer()">Stop</button>
+
+	<script type="text/javascript">
+
+		var myInterval = setInterval(function() { timer() }, 1000);
+		var myButton = document.getElementsByTagName("button")[0];
+
+		function timer() {
+			var theDate = new Date();
+			var theTime = theDate.toLocaleTimeString();
+			document.getElementById("showTimer").innerHTML = theTime;
+		}
+
+		function stopTimer() {
+			clearInterval(myInterval);
+			myButton.innerHTML = "start time"; 
+    		myButton.setAttribute("onclick", "startTimer()");
+		}
+
+		function startTimer() {
+			myInterval = setInterval(function() { timer() }, 1000);
+			myButton.innerHTML = "stop time"; 
+    		myButton.setAttribute("onclick", "stopTimer()");
+		}
+
+	</script>
+
+</body>
+</html>

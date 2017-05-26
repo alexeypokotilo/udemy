@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+	Interval
+	</title>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-type" content="text/html" charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<div id="showTimer"></div>
+
+<br><br>
+
+<button onclick="stopTimer()"> Stop </button>
+
+	<script type="text/javascript">
+
+		//var testInterval = setInterval(function() { alert("interval alert") }, 1000);
+
+		//var testTimeout = setTimeout(function() { alert("and this is a timeout") }, 1000);
+
+		var myInterval = setInterval(function() { timer() }, 1000);
+
+		function timer() {
+			var theDate = new Date();
+			var theTime = theDate.toLocaleTimeString();
+			document.getElementById("showTimer").innerHTML = theTime;
+		}
+
+		function stopTimer() {
+			clearInterval(myInterval);
+		}
+
+
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS arrays</title>
+	<meta charset="utf-8">
+</head>
+<body>
+
+	<input type="text" id="character"><br>
+	<button id="addCharacter">Add Character</button>
+	<p id="content"></p>
+
+	<script type="text/javascript">
+		
+		var myArray = ["batman", "superman", "hulk"];
+		var myInput = document.getElementById("character").value;
+
+		document.getElementById("addCharacter").onclick = function() {
+
+			myInput = document.getElementById("character").value;
+			myArray.push(myInput);
+			document.getElementById("content").innerHTML = "New Array: " + myArray;
+		}
+		
+
+
+
+			//document.getElementById("content").innerHTML = myArray;
+
+			//myArray.push("captain"); /* insert new item */
+
+			//myArray.pop(); /* remove from the end*/
+
+			//myArray.shift(); /* remove from the beginning */
+
+			//myArray.unshift("ironMan"); /* add to the beginning */
+
+			//delete myArray[0]; /*delete the item*/  
+
+
+	</script>
+
+</body>
+</html>
